@@ -131,7 +131,7 @@ struct DiscQuery {
     id: i32,
 }
 
-/// List of disc IDs containing provided hash
+/// List of disc IDs containing provided hash (BIN/ISO only, no CUE or Extras hashes)
 async fn discs_search(
     State(state): State<AppState>,
     query: Result<Query<DiscsQuery>, QueryRejection>,
